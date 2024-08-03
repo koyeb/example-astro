@@ -1,0 +1,311 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Blog Page";
+---
+
+<Layout title={`Pest-Doc AI | ${pageTitle}`}>
+  <main>
+    <div class="banner-container">
+      <div class="banner">
+        <img src="assets/banner-image-blog.svg" alt="banner" />
+      </div>
+      <div class="banner-text">
+        <div class="text-content">
+          <p style={{ paddingBottom: "20px" }}>POSTED ON <span style={{ color: "#0098B0" }}><span style={{ fontWeight: "bold" }}>Pest</span>Doc<span style={{ fontWeight: "bold" }}>-AI</span></span></p>
+          <h1>The Rise of Artificial Intelligence in Healthcare</h1>
+          <p style={{ paddingTop: "20px", paddingBottom: "20px" }}>By <span style={{ color: "#0098B0" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+          <p style={{ color: "#B5B6BB" }}>World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
+        </div>
+        <button onclick="handleReadMore()">Read More</button>
+      </div>
+    </div>
+    <div class="post-container">
+      <div class="feature-post">
+        <p style={{ fontWeight: "600", paddingBottom: "20px" }}>Feature Post</p>
+        <img src="assets/image-allpost.svg" alt="image-allpost" />
+        <p style={{ paddingTop: "20px", paddingBottom: "20px", fontWeight: "600" }}>By <span style={{ color: "#005ff9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+        <h1>Global Climate Summit Addresses Urgent Climate Action</h1>
+        <p style={{ color: "#7A808C", fontSize: "15px", width: "85%" }}>World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
+        <button onclick="handleReadMore()">Read More</button>
+      </div>
+      <div class="all-posts">
+        <div class="all-post-content">
+          <p style={{ fontWeight: "600", paddingBottom: "40px", paddingTop: "10px" }}>All Post</p>
+          <p style={{ paddingTop: "25px", paddingBottom: "15px", marginLeft: "25px" }}>By <span style={{ color: "#005FF9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+          <h1>A Decisive Victory for Progressive Policies</h1>
+          <div style={{ paddingTop: "20px" }}>
+            <p style={{ paddingTop: "25px", paddingBottom: "15px", marginLeft: "25px" }}>By <span style={{ color: "#005FF9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+            <h1>A Decisive Victory for Progressive Policies</h1>
+          </div>
+          <div style={{ paddingTop: "20px" }}>
+            <p style={{ paddingTop: "25px", paddingBottom: "15px", marginLeft: "25px" }}>By <span style={{ color: "#005FF9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+            <h1>A Decisive Victory for Progressive Policies</h1>
+          </div>
+          <div style={{ paddingTop: "20px" }}>
+            <p style={{ paddingTop: "25px", paddingBottom: "15px", marginLeft: "25px" }}>By <span style={{ color: "#005FF9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
+            <h1>A Decisive Victory for Progressive Policies</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style={{ paddingTop: "25px" }} class="container-category">
+      <p>Choose a category</p>
+      <div class="row-category">
+        <div class="column-category"><button>Business</button></div>
+        <div style={{ alignItems: "center" }} class="column-category"><button>Environment</button></div>
+        <div class="column-category"><button>Politic</button></div>
+        <div class="column-category"><button>Tech</button></div>
+        <div class="column-category"><button>Health</button></div>
+      </div>
+    </div>
+    <div class="container-blog">
+      <p>Blog Post</p>
+      <div class="row-blog">
+        <div class="column-blog-image">
+          <img src="assets/image-allpost.svg" alt="image-blog" />
+        </div>
+        <div class="column-content">
+          <div class="column-text">
+            <p style={{ backgroundColor: "#C5FFC8", fontWeight: "600", borderRadius: "8px", marginTop: "40px" }}>Environment</p>
+            <h1 style="width: 100%;">Global Climate Summit Addresses Urgent Climate Action</h1>
+            <p style="color: #7A808C;">World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
+          </div>
+          <button id="readMoreBtn">Read More</button>
+        </div>
+      </div>
+      <div class="row-blog">
+        <div class="column-blog-image">
+          <img src="assets/image-allpost.svg" alt="image-blog" />
+        </div>
+        <div class="column-content">
+          <div class="column-text">
+            <p style={{ backgroundColor: "#C5FFC8", fontWeight: "600", borderRadius: "8px", marginTop: "40px" }}>Environment</p>
+            <h1 style="width: 100%;">Global Climate Summit Addresses Urgent Climate Action</h1>
+            <p style="color: #7A808C;">World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
+          </div>
+          <button>Read More</button>
+        </div>
+      </div>
+      <div class="row-blog">
+        <div class="column-blog-image">
+          <img src="assets/image-allpost.svg" alt="image-blog" />
+        </div>
+        <div class="column-content">
+          <div class="column-text">
+            <p style={{ backgroundColor: "#C5FFC8", fontWeight: "600", borderRadius: "8px", marginTop: "40px" }}>Environment</p>
+            <h1 style="width: 100%;">Global Climate Summit Addresses Urgent Climate Action</h1>
+            <p style="color: #7A808C;">World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
+          </div>
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      document.getElementById("readMoreBtn")?.addEventListener("click", () => {
+        window.location.href = "/blog/blog-healthcare";
+      });
+    });
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+    .banner-container {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner {
+      width: 100%;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      transform: translate(23%, -50%);
+      text-align: flex-start;
+      color: white;
+      width: 55%;
+    }
+    .banner-text button {
+      color: white;
+      background-color: #0098b0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 8px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    .text-content {
+      padding-left: 23px;
+    }
+    .text-content h1 {
+      font-weight: bold;
+      font-size: 32px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .post-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .feature-post {
+      width: 58%;
+      padding-top: 50px;
+      justify-content: center;
+      transform: translate(70px, 10px);
+      border-right: 1px solid #e0e0e0;
+    }
+    .feature-post button {
+      color: white;
+      background-color: #005ff9;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .feature-post img {
+      width: 85%;
+      height: auto;
+    }
+    .feature-post h1 {
+      font-weight: bold;
+      font-size: 24px;
+      width: 65%;
+      padding-bottom: 10px;
+    }
+    .all-posts {
+      padding-top: 50px;
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 5px;
+    }
+    .all-post {
+      padding: 20px;
+    }
+    .all-post-content h1 {
+      font-weight: bold;
+      font-size: 24px;
+      width: 60%;
+      margin-left: 25px;
+    }
+    .row-category {
+      padding-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 115px;
+    }
+    .container-category p {
+      font-weight: 500;
+      padding-left: 50px;
+      padding-top: 40px;
+      margin-top: 25px;
+    }
+    .column-category {
+      flex: 0 1 auto;
+      text-align: center;
+    }
+    .column-category button {
+      width: 157px;
+      height: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 8px;
+      padding: 0 10px;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid #eff0f6;
+      background-color: white;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .column-category button:hover {
+      background-color: #00246b;
+      color: white;
+    }
+    .container-blog {
+      /* max-width: 75%; */
+    }
+
+    .container-blog > p {
+      font-weight: 600;
+      margin-top: 35px;
+      margin-left: 45px;
+    }
+
+    .row-blog {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      margin-top: 50px;
+      margin-left: 45px;
+      margin-right: 45px;
+      border: 1px solid #eff0f6;
+      border-radius: 8px;
+    }
+
+    .column-blog-image {
+      flex: 0 0 35%;
+    }
+
+    .column-blog-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .column-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .column-text h1 {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .column-text p:first-child {
+      display: inline-block;
+      background-color: #c5ffc8;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .column-text p:last-child {
+      color: #7a808c;
+      line-height: 1.6;
+    }
+
+    .column-content button {
+      background-color: #0098b0;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      align-self: flex-end;
+      margin-top: 20px;
+    }
+  </style>
+</Layout>

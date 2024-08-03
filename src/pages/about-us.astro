@@ -1,0 +1,371 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "About Page";
+---
+
+<Layout title={`Pest-Doc AI | ${pageTitle}`}>
+  <main>
+    <div class="banner-container">
+      <div class="banner">
+        <img src="assets/banner-about.svg" alt="banner-about" />
+      </div>
+      <div class="banner-text">
+        <div class="text-content">
+          <div class="line"></div>
+          <p>About Us</p>
+          <h1>Who are we?</h1>
+          <h1>Let's find out</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row-insight">
+      <div class="column">
+        <h2>300<span style={{ color: "#0098B0" }}>+</span></h2>
+        <p>Resources available</p>
+      </div>
+      <div class="column">
+        <h2>12k<span style={{ color: "#0098B0" }}>+</span></h2>
+        <p>Total Downloads</p>
+      </div>
+      <div class="column">
+        <h2>10k<span style={{ color: "#0098B0" }}>+</span></h2>
+        <p>Active Users</p>
+      </div>
+      <div class="column">
+        <h2>100<span style={{ color: "#0098B0" }}>+</span></h2>
+        <p>Countries Accesses Our Content</p>
+      </div>
+    </div>
+    <div class="row-about-us">
+      <div class="column-about-us">
+        <h2>About Us</h2>
+        <h2 style={{ color: "#00C1DF" }}>Pest-Doc AI</h2>
+      </div>
+      <div class="column-about-us">
+        <p>
+          Welcome to PestDoc-AI, your trusted partner in comprehensive pest consultation solutions. At PestDoc-AI, we recognize the frustration and challenges associated with managing pests in urban and residential environments. Urban pests, such as
+          rats, cockroaches, and mosquitoes, are highly adaptable creatures that infiltrate our homes, workplaces, industrial sites, offshore installations, and transportation modes like ships and trains. These pests exploit the resources and shelter
+          provided by human activities, posing significant risks to health, safety, property, and the economy.
+        </p>
+        <br />
+        <p>
+          Urban pests can contaminate food, spread diseases, and cause structural damage, resulting in lost revenue, business closures, and diminished property values. Their presence disrupts the comfort and aesthetics of our living and working
+          spaces. The mere sight or sound of these pests can be distressing. Therefore, effective pest control is essential for maintaining a healthy, prosperous, and pleasant environment in our cities and beyond. Proper management of these pests is
+          crucial to protecting public health, safeguarding property, and preserving quality of life across various human-centric settings.
+        </p>
+        <br />
+        <p>
+          To address these challenges, we have developed an innovative platform powered by cutting-edge AI technology. PestDoc-AI provides personalized pest consultation at your fingertips, making pest management more accessible, efficient, and
+          sustainable for everyone.
+        </p>
+      </div>
+    </div>
+    <div class="row-mission-offer" style="background-color: #EFF0F6;">
+      <div class="column-mission-offer">
+        <div class="our-mission">
+          <p style={{ fontWeight: "500", paddingBottom: "10px" }}>OUR MISSION</p>
+          <h1 style={{ fontWeight: "600", fontSize: "30px" }}>Our Mission at PestDoc-AI is clear</h1>
+          <p style={{ color: "#6D6E76", fontSize: "14", lineHeight: "25px", paddingTop: "10px" }}>
+            Our mission at PestDoc-AI is clear: to empower individuals and businesses with the knowledge and tools needed for effective pest management and eradication. By harnessing the power of artificial intelligence, we aim to transform pest
+            consultation, making it more user-friendly, efficient, and environmentally responsible.
+          </p>
+        </div>
+      </div>
+      <div class="column-mission-offer">
+        <div class="our-offer">
+          <p style={{ fontWeight: "500", paddingBottom: "10px" }}>WHAT WE OFFER</p>
+          <h1 style={{ fontWeight: "600", fontSize: "30px" }}>With PestDoc-AI,</h1>
+          <p style={{ color: "#6D6E76", fontSize: "14px", lineHeight: "25px", paddingTop: "10px" }}>
+            you can access expert advice and customized pest management strategies tailored to your unique needs. Whether you're dealing with common household pests like ants, cockroaches, or rodents, or facing more complex challenges in industrial
+            or commercial settings, our AI-powered platform provides step-by-step guidance and solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row-team">
+      <div class="column-team">
+        <div class="team-intro">
+          <h1 style={{ color: "#0098B0" }}><span>Pest</span><span>Doc</span> - AI</h1>
+          <h1>Team</h1>
+          <img src="assets/PestDoc-people.svg" alt="people" style="width: 100%;, margin-left: 100px;" />
+        </div>
+      </div>
+      <div class="column-team">
+        <div class="about-pestdoc">
+          <p>
+            Behind PestDoc-AI is a dedicated team of professionals with a passion for technology and a commitment to environmental stewardship. Our platform has been meticulously fine-tuned by experts with PhDs from prestigious institutions such as
+            the University of Illinois and Bandung Institute of Technology. Our team comprises entomologists, data scientists, software engineers, and customer support specialists who work tirelessly to ensure that PestDoc-AI remains a leader in pest
+            consultation innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-2" style={{ display: "block", marginRight: "auto", marginLeft: "auto", padding: "70px" }}>
+        <img src="assets/Group 260.svg" alt="group" style={{ width: "50px", paddingBottom: "40px", paddingTop: "20px" }} />
+        <h2 style={{ fontWeight: "bold" }}>Get in Touch with<br /> PestDoc-AI</h2>
+      </div>
+      <div class="column-2">
+        <form style="width: 100%;">
+          <div class="input-row">
+            <input type="text" placeholder="Enter First Name" />
+            <input type="text" placeholder="Enter Last Name" />
+          </div>
+          <div class="input-row">
+            <input type="email" placeholder="Enter your Email" />
+            <input type="tel" placeholder="Enter Phone Number" />
+          </div>
+          <div class="input-row">
+            <textarea placeholder="Enter your Message"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+              <input type="checkbox" id="terms" />
+              <label for="terms">I agree with Terms of Use and Privacy Policy</label>
+            </div>
+            <button type="submit" style="color: white; background-color: #0098B0; border-radius: 8px; padding: 8px 16px; border: none;">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+    main {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .banner-container {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner {
+      width: 100%;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      text-align: flex-start;
+      color: white;
+      width: 100%;
+    }
+    .text-content {
+      position: relative;
+      padding-left: 20px;
+    }
+    .text-content::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 170px;
+      width: 5px;
+      background-color: #00c1df;
+    }
+    .banner-text p {
+      font-family: "Karla", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .banner-text h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 50px;
+      font-weight: 600;
+    }
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      height: 150px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row-insight::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .column h2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 60px;
+    }
+    .column p {
+      color: #7a808c;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .row-about-us {
+      padding-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px; /* Negative margin to offset padding on columns */
+    }
+
+    .column-about-us {
+      flex: 1;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+    .column-about-us p {
+      font-weight: 400;
+      size: 24px;
+      position: relative;
+      padding-right: 50px;
+    }
+    .column-about-us h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 50px;
+      font-weight: 600;
+      position: relative;
+      padding-left: 80px;
+    }
+    .row-mission-offer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 15px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .column-mission-offer {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .our-mission,
+    .our-offer {
+      height: 100%;
+    }
+    .row-team {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 15px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .column-team {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .team-intro,
+    .about-pestdoc {
+      height: 100%;
+    }
+
+    .team-intro h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .about-pestdoc p {
+      font-family: "Karla", sans-serif;
+      font-size: 16px;
+      margin-right: 50px;
+      margin-left: 50px;
+      padding-left: 50px;
+      padding-right: 220px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .column-2 {
+      flex: 50%;
+      padding: 10px;
+    }
+    form {
+      width: 100%;
+      /* display: flex; */
+      /* flex-direction: column; */
+    }
+    form div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    form input {
+      /* flex: 1; */
+      /* width: 100%; */
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form textarea {
+      width: 100%;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form input:last-child,
+    form textarea {
+      margin-right: 0;
+    }
+    form .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    form .input-row input {
+      flex: 1;
+    }
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .form-footer .terms {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-footer button {
+      color: white;
+      background-color: #0098b0;
+      border-radius: 8px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .app-2 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .app-2 img {
+      height: 100px;
+      width: 150px;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,366 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Contact Page";
+---
+
+<Layout title={`Pest-Doc AI | ${pageTitle}`}>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.querySelector(".content");
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    });
+  </script>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h2>General Inquiries</h2>
+          <button class="contact-button">
+            <span>Contact@ai-podcasts.com <img src="assets/Icon-arrow.png" alt="arrow" width="20" height="20" style={{ marginLeft: "8px" }} /></span>
+          </button>
+          <button class="contact-button">
+            <span>+1(123) 456-789 <img src="assets/Icon-arrow.png" alt="arrow" width="20" height="20" style={{ marginLeft: "8px" }} /></span>
+          </button>
+        </div>
+        <div class="column">
+          <h2>Technical Support</h2>
+          <button class="contact-button">
+            <span>Contact@ai-podcasts.com <img src="assets/Icon-arrow.png" alt="arrow" width="20" height="20" style={{ marginLeft: "8px" }} /></span>
+          </button>
+          <button class="contact-button">
+            <span>+1(123) 456-789 <img src="assets/Icon-arrow.png" alt="arrow" width="20" height="20" style={{ marginLeft: "8px" }} /></span>
+          </button>
+        </div>
+        <div class="column">
+          <h2>Our Office</h2>
+          <p style="color:#98989A; font-size: 14px;">Address: 123 AI Tech Avenue, Techville, 54321</p>
+          <button class="contact-button" style={{ backgroundColor: "#0098B0", color: "white" }}>
+            <span>Get Directions <img src="assets/Icon-arrow-white.png" alt="arrow" width="20" height="20" style={{ marginLeft: "8px" }} /></span>
+          </button>
+        </div>
+        <div class="column">
+          <h2>Connect with Us</h2>
+          <div class="button-connect">
+            <img src="assets/btn-twitter.svg" alt="twitter" />
+            <img src="assets/btn-medium.svg" alt="medium" />
+            <img src="assets/btn-linkedin.svg" alt="linkedin" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-2" style={{ display: "block", marginRight: "auto", marginLeft: "auto", padding: "70px" }}>
+          <img src="assets/Group 260.svg" alt="group" style={{ width: "50px", paddingBottom: "40px", paddingTop: "20px" }} />
+          <h2>Get in Touch with<br /> PestDoc-AI</h2>
+        </div>
+        <div class="column-2">
+          <form style="width: 100%;">
+            <div class="input-row">
+              <input type="text" placeholder="Enter First Name" />
+              <input type="text" placeholder="Enter Last Name" />
+            </div>
+            <div class="input-row">
+              <input type="email" placeholder="Enter your Email" />
+              <input type="tel" placeholder="Enter Phone Number" />
+            </div>
+            <div class="input-row">
+              <textarea placeholder="Enter your Message"></textarea>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center;">
+                <input type="checkbox" id="terms" />
+                <label for="terms">I agree with Terms of Use and Privacy Policy</label>
+              </div>
+              <button type="submit" style="color: white; background-color: #0098B0; border-radius: 8px; padding: 8px 16px; border: none;">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-2" style={{ display: "block", marginRight: "auto", marginLeft: "auto", padding: "70px" }}>
+          <img src="assets/Icon.svg" alt="group" style={{ width: "64px", paddingBottom: "20px" }} />
+          <h2 style={{ paddingTop: "20px" }}>Asked question</h2>
+          <p style={{ paddingTop: "20px" }}>if the question is not available on our FAQ section, feel free to contact us personally, we will resolve your respective doubts.</p>
+          <button class="contact-button" style={{ backgroundColor: "#0098B0", color: "white", width: "35%" }}>
+            <span>Ask Question <img src="assets/Icon-arrow-white.png" alt="arrow" width="20" height="20" /></span>
+          </button>
+        </div>
+        <div class="column-2">
+          <div class="faq">
+            <button class="collapsible">
+              What is AI?
+              <div class="content">
+                <p>AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+              </div>
+            </button>
+            <button class="collapsible">
+              How can I listen to your podcast?
+              <div class="content">
+                <p>You can listen to our podcast on various platforms such as Spotify, Apple Podcasts, Google Podcasts, or directly on our website. Simply search for our podcast name and start listening!</p>
+              </div>
+            </button>
+            <button class="collapsible">
+              How can I listen to your podcast?
+              <div class="content">
+                <p>You can listen to our podcast on various platforms such as Spotify, Apple Podcasts, Google Podcasts, or directly on our website. Simply search for our podcast name and start listening!</p>
+              </div>
+            </button>
+            <button class="collapsible">
+              How can I listen to your podcast?
+              <div class="content">
+                <p>You can listen to our podcast on various platforms such as Spotify, Apple Podcasts, Google Podcasts, or directly on our website. Simply search for our podcast name and start listening!</p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 25%;
+      padding: 10px;
+      border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+    .column-2 {
+      flex: 50%;
+      padding: 10px;
+      border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+    .column:first-child,
+    .column-2:first-child {
+      border-left: none;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    .contact-button,
+    .map-button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color:;
+      color: #98989a;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-color: #b5b6bb;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 8px;
+    }
+    .contact-button:hover {
+      background-color: #d1cfcf;
+    }
+    .contact-button:active {
+      color: grey;
+    }
+    .contact-button span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .button-connect {
+      display: flex;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .button-connect img {
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+    .button-connect:hover {
+      color: #grey;
+    }
+    form {
+      width: 100%;
+      /* display: flex; */
+      /* flex-direction: column; */
+    }
+    form div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    form input {
+      /* flex: 1; */
+      /* width: 100%; */
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form textarea {
+      width: 100%;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form input:last-child,
+    form textarea {
+      margin-right: 0;
+    }
+    form .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    form .input-row input {
+      flex: 1;
+    }
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .form-footer .terms {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-footer button {
+      color: white;
+      background-color: #0098b0;
+      border-radius: 8px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .collapsible {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: solid;
+      border-width: 1px;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      border-radius: 8px;
+      transition: 0.4s;
+      margin-bottom: 10px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #f1f1f1;
+    }
+
+    .collapsible:after {
+      /* content: "\002B"; */
+      /* color: #005ff9; */
+      /* font-weight: bold; */
+      /* float: right; */
+      /* margin-left: 5px; */
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: white;
+      padding: 0 18px;
+    }
+    .content p {
+      margin: 10px 0;
+    }
+    .active .content {
+      max-height: 1000px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .faq-item {
+      margin-bottom: 10px;
+    }
+
+    .collapsible {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: solid;
+      border-width: 1px;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      border-radius: 8px;
+    }
+    .active,
+    .collapsible:hover {
+      background-color: white;
+    }
+
+    .collapsible:after {
+      content: "\002B";
+      color: #005ff9;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: white;
+      border-radius: 8px;
+      padding-left: 0;
+    }
+    h1 {
+      color: #252525;
+      font-weight: 600;
+      font-size: 32px;
+      font-family: "Poppins", sans-serif;
+    }
+    .app-2 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .app-2 img {
+      height: 100px;
+      width: 150px;
+    }
+  </style>
+</Layout>

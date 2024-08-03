@@ -16,24 +16,24 @@ export default function MyNavbar() {
       </NavbarContent>
       <NavbarContent style={{ flex: 1 }} justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="/" style={{ color: "inherit", textDecoration: "none", cursor: "pointer" }}>
             Home
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color="foreground" aria-current="page">
+          <a href="/blog" style={{ color: "inherit", textDecoration: "none", cursor: "pointer" }}>
             Blog
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="/about-us" style={{ color: "inherit", textDecoration: "none", cursor: "pointer" }}>
             About
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="/contact" style={{ color: "inherit", textDecoration: "none", cursor: "pointer" }}>
             Contact
-          </Link>
+          </a>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">

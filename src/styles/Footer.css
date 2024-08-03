@@ -61,3 +61,19 @@ ul {
   font-size: 13px;
   justify-content: space-between;
 }
+h1 {
+  color: #252525;
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+.app-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.app,
+.app-2 img {
+  height: 100px;
+  width: 150px;
+}

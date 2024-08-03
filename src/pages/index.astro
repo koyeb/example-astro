@@ -1,14 +1,12 @@
 ---
-import Navbar from "../components/Navbar.jsx";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.jsx";
 const pageTitle = "Home Page";
+import "../styles/tailwind.css";
 ---
 
-<link rel="icon" href="./assets/PestDoc-AI-Hp.svg" type="image/x-icon" />
+<!-- <link rel="icon" href="./assets/PestDoc-AI-Hp.svg" type="image/x-icon" /> -->
 <Layout title={`Pest-Doc AI | ${pageTitle}`}>
   <main>
-    <Navbar />
     <div class="welcome-container">
       <img src="assets/PestDoc-AI-Welcome.svg" alt="welcome" class="welcome-img" />
       <img src="assets/PestDoc-AI-txt.svg" alt="PestDoc-AI-txt" class="text-img" />
@@ -88,20 +86,6 @@ const pageTitle = "Home Page";
         <img src="assets/CEO&Founder-Bu Lin.svg" alt="" />
       </div>
     </section>
-    <section>
-      <div style="padding-top:100px">
-        <h1 style="text-align:center">Concultation With <span style="color:#00C1DF">Pest-Doc AI</span></h1>
-        <p style="text-align:center">Welcome to PestDoc-AI, your reliable pest consultation companion.</p>
-      </div>
-      <hr style="border-top: 1px solid #00C1DF; width: 17%; margin: 0 auto" />
-      <h1 style="text-align:center; padding-top:70px">Download Now</h1>
-      <div class="app-2">
-        <img src="assets/Google-Play.svg" alt="Google-Play" />
-        <img src="assets/App-Store.svg" alt="App-Store" />
-      </div>
-    </section>
-    <hr />
-    <Footer />
   </main>
 
   <style>
@@ -202,7 +186,6 @@ const pageTitle = "Home Page";
       color: white;
       font-family: "Poppins", sans-serif;
       text-align: center;
-      /* z-index: 1; */
       font-weight: 600;
       padding-top: 40px;
     }
