@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {Image, Input, Button} from "@nextui-org/react";
+---
+
+<Layout title="Landing Page">
+    <div class="w-full bg-[#006676] px-20 py-24">
+        <div class="absolute w-[72vw] right-0 top-0 ">
+            <Image
+                    alt="Landing Page Main Image"
+                    src="/bg-image-landing-page.png"
+                    client:visible
+            />
+        </div>
+        <div class="flex flex-row gap-4 items-center mb-40">
+            <Image
+                    width={56}
+                    alt="Pestdoc-ai logo"
+                    src="/pestdoc-logo.svg"
+                    client:visible
+            />
+            <span class="text-4xl text-white font-poppins"><span class="font-semibold">Pest</span>Doc<span class="font-semibold">-AI</span></span>
+        </div>
+        <div class="flex flex-col gap-16 text-white max-w-[40vw]">
+            <div class="font-semibold text-6xl flex flex-col gap-2.5">
+                <div>
+                    Hey Guys!
+                </div>
+                <div>
+                    We’re coming soon...
+                </div>
+            </div>
+            <div class="text-xl fontMontserrat">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <div class="flex flex-row gap-2.5 items-center">
+                <label>
+                    <Input type="email" label="Email" />
+                </label>
+                <Button class="bg-[#00FFFF] text-[#000000] font-medium" size="lg">
+                    Button
+                </Button>
+            </div>
+        </div>
+    </div>
+</Layout>
