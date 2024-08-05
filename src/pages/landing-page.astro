@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "@nextui-org/react";
+import {Button, Image, Input, Link} from "@nextui-org/react";
 import FormEmailLandingPage from "../components/landing-page/form-email.jsx";
+import React from "react";
 ---
 
 <Layout title="Landing Page">
-    <div class="w-full h-full bg-[#006676] px-20 py-24">
+    <div class="w-full h-full min-h-screen bg-[#006676] px-20 py-24">
         <div class="absolute right-0 top-0">
             <Image
                     height="100vh"
@@ -14,7 +15,7 @@ import FormEmailLandingPage from "../components/landing-page/form-email.jsx";
                     client:visible
             />
         </div>
-        <div class="flex flex-row gap-4 items-center mb-40">
+        <div class="flex flex-row gap-4 items-center mb-20">
             <Image
                     width={56}
                     alt="Pestdoc-ai logo"
@@ -23,7 +24,7 @@ import FormEmailLandingPage from "../components/landing-page/form-email.jsx";
             />
             <span class="text-4xl text-white font-poppins"><span class="font-semibold">Pest</span>Doc<span class="font-semibold">-AI</span></span>
         </div>
-        <div class="flex flex-col gap-16 text-white max-w-[40vw]">
+        <div class="flex flex-col gap-16 text-white max-w-full lg:max-w-[40vw]">
             <div class="font-semibold text-6xl flex flex-col gap-2.5">
                 <div>
                     Hey Guys!
@@ -35,7 +36,23 @@ import FormEmailLandingPage from "../components/landing-page/form-email.jsx";
             <div class="text-xl fontMontserrat">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </div>
-            <FormEmailLandingPage />
+            <div class="flex flex-row gap-2.5 items-center">
+                <Input type="email" label="Email" client:visible/>
+                <Button className="bg-gradient-to-tr from-[#B8E7BD] to-[#35BA8F] text-white font-medium" size="lg" client:visible>
+                    Notify me
+                </Button>
+            </div>
+            <div class="flex flex-row gap-4">
+                <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/" as={Link}>
+                    <img src="/instagram.svg" alt="logo instagram" width="32"/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai" as={Link}>
+                    <img src="/tiktok.svg" alt="logo tiktok" width="32"/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link}>
+                    <img src="/simple-icons_x.svg" alt="logo twitter" width="32"/>
+                </Button>
+            </div>
         </div>
     </div>
 </Layout>
