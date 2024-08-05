@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import {Image, Input, Button} from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
+import FormEmailLandingPage from "../components/landing-page/form-email.jsx";
 ---
 
 <Layout title="Landing Page">
-    <div class="w-full bg-[#006676] px-20 py-24">
-        <div class="absolute w-[72vw] right-0 top-0 ">
+    <div class="w-full h-full bg-[#006676] px-20 py-24">
+        <div class="absolute right-0 top-0">
             <Image
+                    height="100vh"
                     alt="Landing Page Main Image"
                     src="/bg-image-landing-page.png"
                     client:visible
@@ -27,20 +29,13 @@ import {Image, Input, Button} from "@nextui-org/react";
                     Hey Guys!
                 </div>
                 <div>
-                    We’re coming soon...
+                    We're coming soon...
                 </div>
             </div>
             <div class="text-xl fontMontserrat">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </div>
-            <div class="flex flex-row gap-2.5 items-center">
-                <label>
-                    <Input type="email" label="Email" />
-                </label>
-                <Button class="bg-[#00FFFF] text-[#000000] font-medium" size="lg">
-                    Button
-                </Button>
-            </div>
+            <FormEmailLandingPage />
         </div>
     </div>
 </Layout>
