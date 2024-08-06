@@ -1,0 +1,111 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {Button, Image, Link} from "@nextui-org/react";
+import InterestEmailForm from "../../components/InterestEmailForm.jsx";
+---
+
+<Layout title="Landing Page">
+    <div class="w-full h-full min-h-screen bg-[#006676] px-5 py-6 sm:px-10 sm:py-12 lg:px-20 lg:py-24">
+        <div class="absolute right-0 top-0 w-3/5 hidden xl:block z-0">
+            <Image
+                    alt="Landing Page Main Image"
+                    src="/bg-awan-large.png"
+                    client:visible
+            />
+        </div>
+        <div class="absolute right-[5%] top-[5%] hidden xl:block z-0">
+            <Image
+                    height="70vh"
+                    alt="Landing Page Main Image"
+                    src="/bg-image-landing-page.gif"
+                    client:visible
+            />
+        </div>
+
+        <div class="absolute right-0 top-0 w-3/5 hidden lg:block xl:hidden z-0">
+            <Image
+                    alt="Landing Page Main Image"
+                    src="/bg-awan-large.png"
+                    client:visible
+            />
+        </div>
+        <div class="absolute right-[5%] top-[5%] hidden lg:block xl:hidden z-0">
+            <Image
+                    height="60vh"
+                    alt="Landing Page Main Image"
+                    src="/bg-image-landing-page.gif"
+                    client:visible
+            />
+        </div>
+
+        <div class="absolute top-0 left-0 right-0 lg:hidden z-0">
+            <Image
+                    width="100%"
+                    alt="Landing Page Main Image"
+                    src="/bg-awan-small.png"
+                    client:visible
+            />
+        </div>
+        <div class="absolute w-3/4 top-[30vw] lg:hidden z-0">
+            <Image
+                    alt="Landing Page Main Image"
+                    src="/bg-image-landing-page.gif"
+                    client:visible
+            />
+        </div>
+
+        <div class="flex flex-row gap-4 items-center ">
+            <div class="hidden md:block">
+                <Image
+                        width={56}
+                        alt="Pestdoc-ai logo"
+                        src="/pestdoc-logo.svg"
+                        client:visible
+                />
+            </div>
+            <div class="hidden xss:block md:hidden">
+                <Image
+                        width={32}
+                        alt="Pestdoc-ai logo"
+                        src="/pestdoc-logo.svg"
+                        client:visible
+                />
+            </div>
+            <div class="block xss:hidden">
+                <Image
+                        width={24}
+                        alt="Pestdoc-ai logo"
+                        src="/pestdoc-logo.svg"
+                        client:visible
+                />
+            </div>
+            <span class="text-lg xss:text-2xl lg:text-4xl text-black lg:text-white font-poppins z-20"><span class="font-semibold">Pest</span>Doc<span class="font-semibold">-AI</span></span>
+        </div>
+        <div class="flex flex-col gap-4 xss:gap-8 lg:gap-16 text-white max-w-full lg:max-w-[40vw] mt-[300px] xxs:mt-[390px] xss:mt-[450px] xs:mt-[550px] sm:mt-[650px] md:mt-[100vh] lg:mt-20">
+            <div class="font-semibold text-2xl xxs:text-3xl xs:text-4xl md:text-6xl flex flex-col gap-2.5">
+                <div class="z-20">
+                    Hey Guys!
+                </div>
+                <div class="z-20">
+                    We're coming soon...
+                </div>
+            </div>
+            <div class="text-xs xss:text-lg md:text-xl fontMontserrat z-20">
+                Get ready to be the first to experience the sophistication of the PestDoc-AI app. Register your email to get an invitation when we launch. Thank you.
+            </div>
+            <InterestEmailForm client:visible />
+            <div class="flex flex-row gap-4">
+                <Button variant="light" isIconOnly aria-label="Instagram" href="https://www.instagram.com/pestdoc_ai/" as={Link}>
+                    <img src="/instagram.svg" alt="logo instagram" width="32"/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Tiktok" href="https://www.tiktok.com/@pestdoc_ai" as={Link}>
+                    <img src="/tiktok.svg" alt="logo tiktok" width="32"/>
+                </Button>
+                <Button variant="light" isIconOnly aria-label="Twitter" href="https://x.com/pestdoc_ai" as={Link}>
+                    <img src="/simple-icons_x.svg" alt="logo twitter" width="32"/>
+                </Button>
+            </div>
+        </div>
+
+    </div>
+</Layout>

@@ -14,6 +14,9 @@ module.exports = {
         sans: ['Poppins', '"Montserrat Variable"', ...defaultTheme.fontFamily.sans],
       },
       screens: {
+        xxs: "375px",
+        xss: "480px",
+        xs: "550px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
