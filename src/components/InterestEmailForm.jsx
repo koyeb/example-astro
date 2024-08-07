@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import {Button, Input, useDisclosure} from "@nextui-org/react";
+import {Button, Input} from "@nextui-org/react";
 
 const InterestEmailForm = () => {
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
+    const [_, setSuccessMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();

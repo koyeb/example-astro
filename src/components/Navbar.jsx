@@ -1,6 +1,5 @@
-import React from "react";
-import { Navbar, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
-import { PestDocLogo } from "../components/PestDoc-Logo.jsx";
+import { Navbar, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import { PestDocLogo } from "./PestDoc-Logo.jsx";
 
 export default function MyNavbar() {
   return (
@@ -38,7 +37,7 @@ export default function MyNavbar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} style={{ color: "white", backgroundColor: "#00C1DF", borderRadius: "8px", width: "140px" }} href="#" variant="flat">
+          <Button style={{ color: "white", backgroundColor: "#00C1DF", borderRadius: "8px", width: "140px" }} href="#" variant="flat">
             Download
           </Button>
         </NavbarItem>

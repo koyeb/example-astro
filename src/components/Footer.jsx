@@ -1,5 +1,3 @@
-import React from "react";
-import { PestDocLogo } from "../components/PestDoc-Logo.jsx";
 import "../styles/Footer.css";
 
 export default function MyFooter() {
@@ -15,8 +13,8 @@ export default function MyFooter() {
         <hr style={{ borderTop: "1px solid #00C1DF", width: "17%", margin: "0 auto" }} />
         <h1 style={{ textAlign: "center", paddingTop: "70px" }}>Download Now</h1>
         <div className="app-2">
-          <img src="assets/Google-Play.svg" alt="Google-Play" />
-          <img src="assets/App-Store.svg" alt="App-Store" />
+          <img src="../../assets/Google-Play.svg" alt="Google-Play" />
+          <img src="../../assets/App-Store.svg" alt="App-Store" />
         </div>
       </section>
       <div className="footer">
@@ -29,27 +27,27 @@ export default function MyFooter() {
             <div className="social-links">
               <a href="#">
                 <i>
-                  <img src="../assets/Facebook.svg" alt="Facebook" />
+                  <img src="../../assets/Facebook.svg" alt="Facebook" />
                 </i>
               </a>
               <a href="#">
                 <i>
-                  <img src="../assets/Twitter.svg" alt="Twitter" />
+                  <img src="../../assets/Twitter.svg" alt="Twitter" />
                 </i>
               </a>
               <a href="#">
                 <i>
-                  <img src="../assets/Instagram.svg" alt="Instagram" />
+                  <img src="../../assets/Instagram.svg" alt="Instagram" />
                 </i>
               </a>
               <a href="#">
                 <i>
-                  <img src="../assets/Linkedin.svg" alt="Linkedin" />
+                  <img src="../../assets/LinkedIn.svg" alt="Linkedin" />
                 </i>
               </a>
               <a href="#">
                 <i>
-                  <img src="../assets/Youtube.svg" alt="Youtube" />
+                  <img src="../../assets/YouTube.svg" alt="Youtube" />
                 </i>
               </a>
             </div>

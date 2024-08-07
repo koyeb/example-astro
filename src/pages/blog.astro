@@ -7,7 +7,7 @@ const pageTitle = "Blog Page";
   <main>
     <div class="banner-container">
       <div class="banner">
-        <img src="assets/banner-image-blog.svg" alt="banner" />
+        <img src="../../assets/banner-image-blog.svg" alt="banner" />
       </div>
       <div class="banner-text">
         <div class="text-content">
@@ -22,7 +22,7 @@ const pageTitle = "Blog Page";
     <div class="post-container">
       <div class="feature-post">
         <p style={{ fontWeight: "600", paddingBottom: "20px" }}>Feature Post</p>
-        <img src="assets/image-allpost.svg" alt="image-allpost" />
+        <img src="../../assets/image-allpost.svg" alt="image-allpost" />
         <p style={{ paddingTop: "20px", paddingBottom: "20px", fontWeight: "600" }}>By <span style={{ color: "#005ff9" }}>Dr. Emily Walker</span> | October 15, 2023</p>
         <h1>Global Climate Summit Addresses Urgent Climate Action</h1>
         <p style={{ color: "#7A808C", fontSize: "15px", width: "85%" }}>World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.</p>
@@ -102,7 +102,7 @@ const pageTitle = "Blog Page";
     </div>
   </main>
   <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
+    document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("readMoreBtn")?.addEventListener("click", () => {
         window.location.href = "/blog/blog-healthcare";
       });
