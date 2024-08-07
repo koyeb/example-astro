@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/node": "^8.2.5",
+    "@astrojs/node": "^8.3.2",
     "@astrojs/react": "^3.6.1",
     "@astrojs/tailwind": "^5.1.0",
     "@emotion/styled": "^11.11.5",
@@ -21,7 +21,7 @@
     "@nextui-org/react": "^2.4.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.6.0",
+    "astro": "^4.13.1",
     "axios": "^1.7.3",
     "example-astro": "file:",
     "framer-motion": "^11.3.21",
