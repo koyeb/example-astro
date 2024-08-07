@@ -19,8 +19,6 @@ const InterestEmailForm = () => {
                 email,
             });
 
-            console.log('response.data : ', response.data);
-
             if (response.status === 201) {
                 setSuccessMessage("Submit successfully.");
                 setErrorMessage("");
