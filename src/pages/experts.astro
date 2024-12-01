@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Experts</Fragment>
+      <Fragment slot="desc">Book a meeting to know more about us!</Fragment>
+    </Sectionhead>
+
+    <iframe 
+      src="https://test-manage.slashexperts.com/experts_directory?company_id=674b603332b83a75f1860fbc&program=23b8e7e3-fea4-406d-ab84-f7be3139f3be" 
+      width="100%"  height="600px" frameborder="0">
+    </iframe>
+  </Container>
+</Layout>
