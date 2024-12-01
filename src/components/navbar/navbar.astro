@@ -8,22 +8,27 @@ const menuitems = [
   {
     title: "Experts",
     path: "/experts",
+    children: null,
   },
   {
     title: "Pricing",
     path: "/pricing",
+    children: null,
   },
   {
     title: "About",
     path: "/about",
+    children: null,
   },
   {
     title: "Blog",
     path: "/blog",
+    children: null,
   },
   {
     title: "Contact",
     path: "/contact",
+    children: null,
   }
 ];
 ---
@@ -46,6 +51,23 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
+                {item.children && (
+                  <Dropdown
+                    title={item.title}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
+                )}
+
+                {!item.children && (
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                      <span> {item.title}</span>
+                    </a>
+                  </li>
+                )}
               </>
             ))
           }
