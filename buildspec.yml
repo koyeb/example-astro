@@ -1,0 +1,63 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    SSH_PRIVATE_KEY: "lightsail/astro-app-ssh-key"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing dependencies..."
+      - npm ci
+
+  build:
+    commands:
+      - echo "Building the application..."
+      - npm run build
+      - echo "Creating deployment package..."
+      - tar --exclude='node_modules' --exclude='.git' -czf deploy.tar.gz .
+
+  post_build:
+    commands:
+      - echo "Deploying to Lightsail instance..."
+      # Set up SSH key
+      - mkdir -p ~/.ssh
+      - echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+      - chmod 600 ~/.ssh/deploy_key
+      # Add host to known_hosts
+      - ssh-keyscan -H 52.45.251.199 >> ~/.ssh/known_hosts 2>/dev/null
+      # Copy deployment package to server
+      - scp -i ~/.ssh/deploy_key deploy.tar.gz bitnami@52.45.251.199:/tmp/
+      # Deploy on server
+      - |
+        ssh -i ~/.ssh/deploy_key bitnami@52.45.251.199 << 'DEPLOY'
+        cd ~/app
+        # Backup current version
+        cp -r dist dist.backup 2>/dev/null || true
+        # Extract new version
+        tar -xzf /tmp/deploy.tar.gz
+        # Install dependencies
+        npm ci --production
+        # Build
+        npm run build
+        # Restart the application
+        pm2 restart astro-app
+        # Clean up
+        rm /tmp/deploy.tar.gz
+        rm -rf dist.backup
+        echo "Deployment complete!"
+        DEPLOY
+      - echo "Deployment successful!"
+
+artifacts:
+  files:
+    - '**/*'
+  exclude-paths:
+    - node_modules/**/*
+
+cache:
+  paths:
+    - node_modules/**/*
+
