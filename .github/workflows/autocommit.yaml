@@ -19,7 +19,7 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config user.name 'Automatic action'
+        git config user 'Automatic action'
         git config user.email 'noreply@koyeb.com'
 
     - name: Create an empty commit and push
